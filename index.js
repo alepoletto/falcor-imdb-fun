@@ -2,7 +2,6 @@
 
 
 var Router = require('falcor-router');
-var Promise = require('promise');
 
 var jsonGraph = require('falcor-json-graph');
 var $ref = jsonGraph.ref;
