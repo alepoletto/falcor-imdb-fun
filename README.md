@@ -1,4 +1,4 @@
-Falcor with express and Angular
+## Falcor with express and Angular
 
 This project is based on the netflix falcor router. Instead of going to the database it fetches data from the imdb open api http://omdbapi.com/ and use Angular on the client side to display some pre-defined movies and also to let the user change the last movie that it wtached.
 
