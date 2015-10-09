@@ -1,0 +1,61 @@
+<!-- index.html -->
+<html  ng-app="app">
+  <head>
+    <!-- Do _not_  rely on this URL in production. Use only during development.  -->
+    <script src="https://netflix.github.io/falcor/build/falcor.browser.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="controller.js"></script>
+   
+  </head>
+  <body ng-controller="mainController">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Last Movie that you Watched</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-4" >
+          <form ng-submit="search()">
+            <div class="form-group">
+              <label for="title">Search by Title</label>
+              <input type="text" ng-model="title" class="form-control" id="title" placeholder="Title">
+              <input class="btn-primary" type="submit" value="search">
+            </div>
+          </form>  
+        </div>
+        <div class="col-xs-4" >
+          <img ng-src="{{lastMovie.image}}"  />
+          <h1>{{lastMovie.title}}</h1>
+          <p>{{lastMovie.director}}</p>
+        </div>
+      </div>
+    </div>    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Top 3 Harrison Ford movies</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-4" ng-repeat="movie in fordMovies">
+          <img ng-src="{{movie.image}}"  />
+          <h1>{{movie.title}} </h1>
+          <p>{{movie.director}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Top 3 Stallone movies</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-4" ng-repeat="movie in stalloneMovies">
+          <img ng-src="{{movie.image}}"  />
+          <h1>{{movie.title}} </h1>
+          <p>{{movie.director}}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

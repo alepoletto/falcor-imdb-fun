@@ -1,0 +1,16 @@
+{
+  "name": "event_poc",
+  "main": "server.js",
+  "version": "0.1",
+  "homepage": "https://github.com/Netflix/falcor-router-demo",
+  "authors": [
+    "Alexandre Poletto <alexandrepoletto@gmail.com>"
+  ],
+  "description": "",
+  "moduleType": [],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}
